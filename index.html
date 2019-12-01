@@ -32,6 +32,126 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+h2{
+  text-align:center;
+  padding: 20px;
+}
+/* Slider */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
 </style>
 <link rel='stylesheet' id='wplc-admin-style-emoji-css'  href='../../bleeper.io/app/assets/wdt-emoji/wdt-emoji-bundle298e.css?ver=8.0.24' type='text/css' media='all' />
 <link rel='stylesheet' id='jquery-ui-css'  href='wp-content/plugins/accordions/assets/frontend/css/jquery-ui.minef15.css?ver=4.8' type='text/css' media='all' />
@@ -433,8 +553,14 @@ font-size: 15px;
 .ur-frontend-form form input[type="submit"]{
 background: #0073aa;
     color: #fff;
-}		</style>
-	
+}	
+
+
+	</style>
+	<!-- Start Bootstrap Carousel HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End Bootstrap Carousel HEAD section -->
 	</head>
 <body class="home page-template-default page page-id-104 wp-custom-logo acme-animate right-sidebar">
 
@@ -466,50 +592,86 @@ background: #0073aa;
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
-                    <a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="400" height="64" src="wp-content/uploads/2019/03/AMU-Logo2-e1553691961985.png" class="custom-logo" alt="Arba Minch University | AMU IUC" itemprop="logo" /></a>                </div>
+                    <a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img height="30" src="wp-content/uploads/2019/03/AMU-Logo2-e1553691961985.jpeg" class="custom-logo" alt="Arba Minch University | AMU IUC" itemprop="logo" /></a>                </div>
                 <div class="main-navigation navbar-collapse collapse">
                     <div class="menu-front-page-container"><ul id="primary-menu" class="nav navbar-nav navbar-right acme-normal-page"><li id="menu-item-227" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-227"><a href="https://www.amu-iuc.com/amu" data-ps2id-api="true">Home</a></li>
 <li id="menu-item-229" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-229"><a href="academic-programs/index.html" data-ps2id-api="true">Program</a></li>
 <li id="menu-item-228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href="admissions-application/admissions/index.html" data-ps2id-api="true">Admissions</a></li>
 <li id="menu-item-232" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232"><a href="admissions-application/tuition-fees/index.html" data-ps2id-api="true">Tuition Fees</a></li>
 <li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a href="apply/index.html" data-ps2id-api="true">Apply</a></li>
+</li>
+<li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a href="apply/index.html" data-ps2id-api="true"><img src="images/vlruos.png" width="200"></a></li>
+<li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a href="apply/index.html" data-ps2id-api="true"><img src="images/iuc.png" width="80"></a></li>
 </ul></div>                </div>
                 <!--/.nav-collapse -->
             </div>
         </div>
-                        <div class="image-slider-wrapper home-fullscreen full-screen-bg">
-                    <div class="acme-owl-carausel">
-                                                    <div class="item" style="background-image:url(wp-content/uploads/2016/10/hh-1.jpg);background-repeat:no-repeat;background-size:cover;background-position:center;">
-                                                                    <div class="slider-content text-left">
-                                        <div class="container">
-                                            <div class="banner-title init-animate slideInUp1">Welcome to AMU-IUC AMU IUC</div>
-                                            <div class="image-slider-caption init-animate slideInUp2">
-                                                <p>Learn Anytime, Anywhere!</p>
-                                            </div>
-                                                                                    </div>
-                                    </div>
-                                                                </div>
-                                                </div>
-                </div>
+            
+
+
+
+
+<div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" data-interval='3000'>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/slide1.jpg" alt="Chania">
+      <div class="carousel-caption">
+        <h3>AMU IUC</h3>
+        <p>The AMU-IUC Program.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="images/slide2.jpg" alt="Chania">
+      <div class="carousel-caption">
+        <h3>AMU IUC</h3>
+        <p>In collaboration with Arba Minch University</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="images/slide3.jpg" alt="Flower">
+      <div class="carousel-caption">
+        <h3>AMU IUC</h3>
+        <p>AMU-IUC is a program launched in Collaboration with Arba Minch University</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
                         <div class="clearfix"></div>
-        <aside id="siteorigin-panels-builder-2" class="widget widget_siteorigin-panels-builder"><div id="pl-w5ce2b1008a682"  class="panel-layout" ><div id="pg-w5ce2b1008a682-0"  class="panel-grid panel-has-style" ><div class="panel-row-style panel-row-style-for-w5ce2b1008a682-0" ><div id="pgc-w5ce2b1008a682-0-0"  class="panel-grid-cell" ><div id="panel-w5ce2b1008a682-0-0-0" class="so-panel widget widget_text panel-first-child panel-last-child" data-index="0" ><div class="panel-widget-style panel-widget-style-for-w5ce2b1008a682-0-0-0" ><h3 class="widget-title">WHY US?</h3>			<div class="textwidget"><p>Leverage AMU&#8217;s quality, flexible &amp; personalized online learning.</p>
-</div>
-		</div></div></div><div id="pgc-w5ce2b1008a682-0-1"  class="panel-grid-cell" ><div id="panel-w5ce2b1008a682-0-1-0" class="so-panel widget widget_text panel-first-child panel-last-child" data-index="1" ><div class="panel-widget-style panel-widget-style-for-w5ce2b1008a682-0-1-0" ><h3 class="widget-title">Learning at your own Convenience</h3>			<div class="textwidget"><p>Experience the benefits of learning from Anywhere, Anytime !</p>
-</div>
-		</div></div></div><div id="pgc-w5ce2b1008a682-0-2"  class="panel-grid-cell" ><div id="panel-w5ce2b1008a682-0-2-0" class="so-panel widget widget_text panel-first-child panel-last-child" data-index="2" ><div class="panel-widget-style panel-widget-style-for-w5ce2b1008a682-0-2-0" ><h3 class="widget-title">STUDY OPTIONS</h3>			<div class="textwidget"><p>AMU offers various degree programs in Business &amp; Economics, Law, Health, Education, Agriculture, Humanities, Social &amp; Natural Sciences.</p>
-</div>
-		</div></div></div></div></div></div></aside><aside id="education_base_course-3" class="widget widget_education_base_course">            <section id="education_base_course-3" class="acme-widgets popular-course">
+        <aside id="education_base_course-3" class="widget widget_education_base_course">            <section id="education_base_course-3" class="acme-widgets popular-course">
                 <div class="container">
                     <div class="main-title init-animate slideInUp1">
-                        <h2 class="widget-title"><span>AMU&#8217;s Academic Programs</span></h2><div class="line"><span class="fa fa-graduation-cap"></span></div>                    </div>
+                        <h2 class="widget-title"><span>AMU&#8217;s IUC Programs</span></h2><div class="line"><span class="fa fa-graduation-cap"></span></div>                    </div>
                     <div class="row">
                                                         <div class="course-item-wrapper init-animate slideInUp1 col-sm-12 col-md-4">
                                     <article id="post-1245" class="init-animate slideInUp1 post post-1245 page type-page status-publish hentry">
     <div class="content-wrapper">
                 <div class="entry-content">
             <div class="entry-header-title">
-                <h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">PHD</a></h2>            </div>
-            <p>The AMU&#8217;s PHD programs are uniquely designed to solve the challenges of our community through applied research.</p>
+                <h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">Project 1</a></h2>            </div>
+            <p>Improving teaching and research processes of AMU by enhancing ICT and library automation</p>
                 <a class="btn btn-primary" href="academic-programs/index.html">
                     Learn More                </a>
                         </div><!-- .entry-content -->
@@ -520,8 +682,8 @@ background: #0073aa;
     <div class="content-wrapper">
                 <div class="entry-content">
             <div class="entry-header-title">
-                <h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">Masters</a></h2>            </div>
-            <p>The AMU&#8217;s degree programs provide early to mid-career professionals with the practical skills and competencies needed to accelerate their careers.</p>
+                <h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">Project 2</a></h2>            </div>
+            <p>Living with uncertainty: Analyzing rural livelihood and rethinking sustainability in South Ethiopian Rift Valley</p>
                 <a class="btn btn-primary" href="academic-programs/index.html">
                     Learn More                </a>
                         </div><!-- .entry-content -->
@@ -532,79 +694,86 @@ background: #0073aa;
     <div class="content-wrapper">
                 <div class="entry-content">
             <div class="entry-header-title">
-                <h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">Bachelors</a></h2>            </div>
-            <p>AMU offers quality Bachelor of Science degree programs in different fields of study. Programs prepare students with the knowledge and practical skills required to successfully build their careers.</p>
+                <h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">Project 3</a></h2>            </div>
+            <p>Improving maternal and child health in the South Ethiopian Rift Valley</p>
                 <a class="btn btn-primary" href="academic-programs/index.html">
                     Learn More                </a>
                         </div><!-- .entry-content -->
     </div>
 </article><!-- #post-## -->                                </div>
+
+
                                 <div class='clearfix'></div>                    </div>
-                </div>
-            </section>
-            </aside><aside id="education_base_course-1" class="widget widget_education_base_course">            <section id="admission-tuition" class="acme-widgets popular-course">
-                <div class="container">
-                    <div class="main-title init-animate slideInUp1">
-                        <h2 class="widget-title"><span>Admissions &#038; Tuition Fees</span></h2><div class="line"><span class="fa fa-graduation-cap"></span></div>                    </div>
-                    <div class="row">
-                                                        <div class="course-item-wrapper init-animate slideInUp1 col-sm-12 col-md-4">
-                                    <article id="post-21" class="init-animate slideInUp1 post post-21 page type-page status-publish hentry">
-    <div class="content-wrapper">
-                <div class="entry-content">
-            <div class="entry-header-title">
-                <h2 class="entry-title"><a href="admissions-application/admissions/index.html" rel="bookmark">Admissions</a></h2>            </div>
-            <p>Enrolling in a university is a big decision and you don’t need a complicated application procedure slowing you down.  That’s why at AMU, we’ve streamlined the process.</p>
-                <a class="btn btn-primary" href="admissions-application/admissions/index.html">
-                    Learn More                </a>
-                        </div><!-- .entry-content -->
-    </div>
+
+
+                                <div class="row">
+                                    <div class="course-item-wrapper init-animate slideInUp1 col-sm-12 col-md-4">
+                <article id="post-1245" class="init-animate slideInUp1 post post-1245 page type-page status-publish hentry">
+<div class="content-wrapper">
+<div class="entry-content">
+<div class="entry-header-title">
+<h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">Project 4</a></h2>            </div>
+<p>Reversing land degradation for sustainable economic development in the South Ethiopian Rift Valley.</p>
+<a class="btn btn-primary" href="academic-programs/index.html">
+Learn More                </a>
+    </div><!-- .entry-content -->
+</div>
 </article><!-- #post-## -->                                </div>
-                                                                <div class="course-item-wrapper init-animate slideInUp1 col-sm-12 col-md-4 col-sm-12 col-md-4">
-                                    <article id="post-25" class="init-animate slideInUp1 post post-25 page type-page status-publish hentry">
-    <div class="content-wrapper">
-                <div class="entry-content">
-            <div class="entry-header-title">
-                <h2 class="entry-title"><a href="admissions-application/tuition-fees/index.html" rel="bookmark">Tuition Fees</a></h2>            </div>
-            <p>AMU believes in making tuition affordable for students interested in advancing their education.  Tuition can be paid in installments (at the beginning of each term).  </p>
-                <a class="btn btn-primary" href="admissions-application/tuition-fees/index.html">
-                    Learn More                </a>
-                        </div><!-- .entry-content -->
-    </div>
+                                            <div class="course-item-wrapper init-animate slideInUp1 col-sm-12 col-md-4 col-sm-12 col-md-4">
+                <article id="post-346" class="init-animate slideInUp1 post post-346 page type-page status-publish hentry">
+<div class="content-wrapper">
+<div class="entry-content">
+<div class="entry-header-title">
+<h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">Project 5</a></h2>            </div>
+<p>: Improving agricultural productivity in the South Ethiopian Rift Valley</p>
+<a class="btn btn-primary" href="academic-programs/index.html">
+Learn More                </a>
+    </div><!-- .entry-content -->
+</div>
 </article><!-- #post-## -->                                </div>
-                                                                <div class="course-item-wrapper init-animate slideInUp1 col-sm-12 col-md-4 col-sm-12 col-md-4 col-sm-12 col-md-4">
-                                    <article id="post-23" class="init-animate slideInUp1 post post-23 page type-page status-publish hentry">
-    <div class="content-wrapper">
-                <div class="entry-content">
-            <div class="entry-header-title">
-                <h2 class="entry-title"><a href="admissions-application/apply/index.html" rel="bookmark">Student Support</a></h2>            </div>
-            <p>AMU IUC&#8217;s online platform provides fast and reliable access to the courses. Our team supports prospective students who are interested in enrolling in AMU programs.</p>
-                <a class="btn btn-primary" href="admissions-application/apply/index.html">
-                    Learn More                </a>
-                        </div><!-- .entry-content -->
-    </div>
+                                            <div class="course-item-wrapper init-animate slideInUp1 col-sm-12 col-md-4 col-sm-12 col-md-4 col-sm-12 col-md-4">
+                <article id="post-342" class="init-animate slideInUp1 post post-342 page type-page status-publish hentry">
+<div class="content-wrapper">
+<div class="entry-content">
+<div class="entry-header-title">
+<h2 class="entry-title"><a href="academic-programs/index.html" rel="bookmark">Project 6</a></h2>            </div>
+<p>Biodiversity conservation for sustainable development in the South Ethiopian Rift Valley.</p>
+<a class="btn btn-primary" href="academic-programs/index.html">
+Learn More                </a>
+    </div><!-- .entry-content -->
+</div>
 </article><!-- #post-## -->                                </div>
-                                <div class='clearfix'></div>                    </div>
+
+
+            <div class='clearfix'></div>                    </div>
+
+
+
                 </div>
             </section>
             </aside>
+            
 <div id="content" class="site-content container clearfix">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			<article id="post-104" class="init-animate slideInUp1 post-104 page type-page status-publish hentry">
-		<!-- .single-feat-->
-	<div class="content-wrapper">
-		<div class="entry-content">
-			<p style="text-align: justify;">Arba Minch University in collaboration with AMU IUC offers flexible blended AMU IUC that are adapted to your program and your schedule. The program is delivered using the latest technology to provide dynamic, interactive learning environments, online, 24 hours a day, seven days a week. Flexible online programs at AMU are offered using interactive tools to support your individual learning style.</p>
-<p style="text-align: left;">Dedicated to educational access and academic excellence, AMU provides challenging and relevant programs that are student-centered, success-oriented, and have a proven balance of theoretical and practical attributes. AMU prepares students for evolving roles in a diverse, dynamic, and interdependent world.</p>
-<p style="text-align: left;">All programs are offered by AMU. Lucy provides all the necessary information about registration, admission, tuition fees and academic programs.</p>
-		</div><!-- .entry-content -->
+   
 
-		<footer class="entry-footer">
-					</footer><!-- .entry-footer -->
-	</div>
-</article><!-- #post-## -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    
+    <div class="container">
+      <h2>Our  Partners</h2>
+       <section class="customer-logos slider">
+          <div class="slide"><img src="images/ku.jpg"></div>
+          <div class="slide"><img src="images/gent.png"></div>
+          <div class="slide"><img src="images/ant.png"></div>
+          <div class="slide"><img src="images/hasselt.png"></div>
+          <div class="slide"><img src="images/vrij.jpg"></div>
+           </section>
+    </div>
+
+
+
 	<div id="secondary-right" class="at-fixed-width widget-area sidebar secondary-sidebar" role="complementary">
 		<div id="sidebar-section-top" class="widget-area sidebar init-animate slideInUp1 clearfix">
 			<section id="search-3" class="widget widget_search"><h2 class="widget-title">Search</h2><div class="line"><span class="fa fa-graduation-cap"></span></div>
@@ -692,7 +861,29 @@ Tel: +251-930-35-05-28</p>
 <script type='text/javascript' src='wp-includes/js/jquery/ui/tabs.mine899.js?ver=1.11.4'></script>
 <script type='text/javascript' src='wp-includes/js/jquery/ui/datepicker.mine899.js?ver=1.11.4'></script>
 <script type='text/javascript'>
-jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});
+$('.carousel').carousel();
+$('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
 </script>
 <script type='text/javascript' src='wp-content/plugins/contact-form-7-datepicker/js/jquery-ui-timepicker/jquery-ui-timepicker-addon.minef15.js?ver=4.8'></script>
 <script type='text/javascript' src='wp-includes/js/jquery/ui/slider.mine899.js?ver=1.11.4'></script>
@@ -781,7 +972,8 @@ var wpcf7 = {"apiSettings":{"root":"https:\/\/www.amu-iuc.com\/amu\/wp-json\/","
 </script>
 <script type='text/javascript' src='wp-content/plugins/contact-form-7-multistep-pro-disabled/frontend/js/cf7_4.891d8.js?ver=1574279006'></script>
 <script type='text/javascript' src='wp-includes/js/wp-embed.minef15.js?ver=4.8'></script>
-		<script type="text/javascript">
+        <script type="text/javascript">
+        
 			jQuery( '#request' ).val( '' );
 		</script>
 	</body>
